@@ -1,4 +1,4 @@
-package com.example.stuart.inputmethods;
+package com.swoosh.inputmethods;
 
 import org.junit.Test;
 

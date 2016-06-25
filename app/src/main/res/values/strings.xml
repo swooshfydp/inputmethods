@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">InputMethods</string>
+    <string name="notificationTitle">Oral Calculator</string>
+    <string name="notificationText">Click to do something...</string>
+    <string name="serviceSettings">Settings</string>
+    <string name="serviceEnabledKey">serviceEnabledKey</string>
+    <string name="title">Overlay Service Enabled</string>
+    <string name="summary">It allows to enable or disable the overlay service.</string>
 </resources>
