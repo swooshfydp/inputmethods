@@ -11,12 +11,7 @@
             <option value="/mnt/Data/Stuart/Git/inputmethods/app" />
           </set>
         </option>
-        <option name="myModules">
-          <set>
-            <option value="/mnt/Data/Stuart/Git/inputmethods" />
-            <option value="/mnt/Data/Stuart/Git/inputmethods/app" />
-          </set>
-        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>
   </component>
