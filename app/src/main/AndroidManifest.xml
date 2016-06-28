@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.swoosh.inputmethods">
-    <uses-sdk
-        android:minSdkVersion="19"
-        android:targetSdkVersion="19" />
 
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
@@ -21,6 +18,20 @@
         </activity>
 
         <service android:name=".OverlayService" />
+        <service android:name=".AutofillService">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".KeyboardService"
+            android:label="@string/keyboardName"
+            android:permission="android.permission.BIND_INPUT_METHOD">
+            <meta-data android:name="android.view.im" android:resource="@xml/method"/>
+            <intent-filter>
+                <action android:name="android.view.InputMethod" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
