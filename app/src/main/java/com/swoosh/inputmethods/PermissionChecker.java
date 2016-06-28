@@ -8,6 +8,7 @@ import android.os.Build;
 import android.provider.Settings;
 
 public class PermissionChecker {
+    private final static String LOGKEY = "SWOOSH_INPUT";
 
     public final static int REQUIRED_PERMISSION_REQUEST_CODE = 2121;
 

@@ -12,6 +12,7 @@ import android.widget.Toast;
 public class SettingsFragment extends PreferenceFragment implements SharedPreferences.OnSharedPreferenceChangeListener {
     private final static String SERVICEENABLEKEY = "serviceEnabledKey";
     private PermissionChecker mPermissionChecker;
+    private final static String LOGKEY = "SWOOSH_INPUT";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -73,10 +74,12 @@ public class SettingsFragment extends PreferenceFragment implements SharedPrefer
     private void startHeadService() {
         Context context = getActivity();
         context.startService(new Intent(context, OverlayService.class));
+        context.startService(new Intent(context, AutofillService.class));
     }
 
     private void stopHeadService() {
         Context context = getActivity();
         context.stopService(new Intent(context, OverlayService.class));
+        context.stopService(new Intent(context, AutofillService.class));
     }
 }

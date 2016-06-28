@@ -4,6 +4,10 @@
     <string name="notificationText">Click to do something...</string>
     <string name="serviceSettings">Settings</string>
     <string name="serviceEnabledKey">serviceEnabledKey</string>
+    <string name="keyboardName">Cash Keyboard</string>
     <string name="title">Overlay Service Enabled</string>
     <string name="summary">It allows to enable or disable the overlay service.</string>
+    <string name="subtype_en_US">English (US)</string>
+    <string name="one_label">1</string>
+    <string name="two_label">2</string>
 </resources>

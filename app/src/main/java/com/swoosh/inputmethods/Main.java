@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class Main extends AppCompatActivity {
+    private final static String LOGKEY = "SWOOSH_INPUT";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -12,7 +13,7 @@ public class Main extends AppCompatActivity {
 
         SettingsFragment settingsFragment = new SettingsFragment();
         getFragmentManager().beginTransaction()
-                .replace(android.R.id.content, settingsFragment)
+                .replace(R.id.content_frame, settingsFragment)
                 .commit();
     }
 }

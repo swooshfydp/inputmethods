@@ -6,8 +6,8 @@ android {
 
     defaultConfig {
         applicationId "com.swoosh.inputmethods"
-        minSdkVersion 15
-        targetSdkVersion 19
+        minSdkVersion 17
+        targetSdkVersion 24
         versionCode 1
         versionName "1.0"
     }
