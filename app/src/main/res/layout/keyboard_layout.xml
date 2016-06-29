@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/reset_button"
+            android:width="50dp"
+            android:textSize="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clear"
+            android:layout_alignParentLeft = "true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="45sp"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/number_out"
+            android:layout_toRightOf="@id/reset_button"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:background="@drawable/keypad_background"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/out_canvas"
+        android:layout_gravity="center_horizontal" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <android.support.v4.view.ViewPager
+            android:background="@drawable/keypad_background"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/in_canvas"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/currecny_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_alignLeft="@id/in_canvas"
+            android:layout_alignTop="@id/in_canvas"
+            android:layout_alignRight="@id/in_canvas"
+            android:gravity="right"
+            android:textColor="#000000"
+            android:text="X0"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="1dp" />
+    </RelativeLayout>
+
+
+</LinearLayout>

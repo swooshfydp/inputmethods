@@ -10,4 +10,7 @@
     <string name="subtype_en_US">English (US)</string>
     <string name="one_label">1</string>
     <string name="two_label">2</string>
+    <string name="clear">Clear</string>
+    <string name="cash_image">cash_image</string>
+    <string name="hello">Hello</string>
 </resources>
