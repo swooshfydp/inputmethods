@@ -36,6 +36,9 @@ captures/
 *.iml
 .idea/workspace.xml
 .idea/libraries
+.idea/gradle.xml
+.idea/misc.xml
 
 # Keystore files
 *.jks
+app/libs/
