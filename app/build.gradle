@@ -2,10 +2,10 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.3"
+    buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "com.example.stuart.inputmethods"
+        applicationId "swoosh.inputmethods"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1
