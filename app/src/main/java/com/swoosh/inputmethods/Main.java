@@ -10,10 +10,5 @@ public class Main extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        SettingsFragment settingsFragment = new SettingsFragment();
-        getFragmentManager().beginTransaction()
-                .replace(R.id.content_frame, settingsFragment)
-                .commit();
     }
 }
