@@ -17,7 +17,6 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".OverlayService" />
         <service android:name=".AutofillService">
             <intent-filter>
                 <action android:name="android.accessibilityservice.AccessibilityService" />

@@ -7,9 +7,19 @@ android {
     defaultConfig {
         applicationId "com.swoosh.inputmethods"
         minSdkVersion 17
-        targetSdkVersion 24
+        targetSdkVersion 19
         versionCode 1
         versionName "1.0"
+    }
+    signingConfigs {
+        if (System.getenv("TRAVIS")) {
+            release {
+                storeFile rootProject.file('release.keystore')
+                storePassword System.getenv("KEYSTORE_PASS")
+                keyAlias System.getenv("ALIAS_NAME")
+                keyPassword System.getenv("ALIAS_PASS")
+            }
+        }
     }
     buildTypes {
         release {
@@ -17,10 +27,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.0.0'
+    compile 'com.android.support:appcompat-v7:23.0.0'
 }

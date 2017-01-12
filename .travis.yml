@@ -1,7 +1,8 @@
 sudo: false
 language: android
 jdk: oraclejdk8
-script: "./gradlew build assembleRelease"
+install: "./gradlew build --stacktrace"
+script: "./gradlew assembleRelease --stacktrace"
 before_install:
 - chmod +x gradlew
 before_cache:
@@ -34,7 +35,7 @@ deploy:
   provider: releases
   skip_cleanup: true
   file_glob: "true"
-  file: app/build/outputs/apk/app*release*.apk
+  file: app/build/outputs/apk/app*release.apk
   api_key:
     secure: TyBhjYvGW6144OjpzGegIAmP/yaheFx1MwrbtPH38MzFmWdDkN4kvK50QOVcP0DN8yiVNRL+ZUiyCvke7KTmMU5WccKWpy2b5kPzg8lCdhDK6X4op7Q+QP3YQ6uaouCA9Q3Tc0/D43/e3Nq40ShTM8RS76QrQlfbi75F2HbD0djwu3impWq6da+uXdGW6bCSKBNW5tPlFc9Hpg9837RrZu2QxM8EMnXsqzyS2GsCN2BrRLJH9g1ybUpXTdd3zf389qpFvTwOfbo/JKQRAmDGvF8w1V1aV/210XgInwF/mJzceOBWWMkjsGg5dFmrXJOOMwlgF99MXnx8rNrjBlUV5DhgIJ96vHO1/EHmnI3bEAw49/Vu1y6UvlC3lhrsuY4XlqOqQ4Ni0KUSKYJhbiCppCIzdMk4NwzK8x6lGZxaqhdu0eoHqSxrZB1HUN71mNYhwvyjPc8msuZ4Zc7ANV0oZrw0PpQihxwuH/OmWm16vGl7klBW+wK7Xs30Sq0GLxssh2ul8weyIciLrxawnR/7i/8QXMFszK5bK2WsD+3ZyYYc+FKhGyVjwgBL7i6+2JFCWIGLhAz3RQ/ZyY+kmoB4jUv6Mecsv4MAdXo1Trtz7NncOuFMO50ZInWi1BbpqQvYmVPJpDkw4nXyd0r+msWk6QZEwIb6Xk2xr0q3uAO/J2Q=
   on:
